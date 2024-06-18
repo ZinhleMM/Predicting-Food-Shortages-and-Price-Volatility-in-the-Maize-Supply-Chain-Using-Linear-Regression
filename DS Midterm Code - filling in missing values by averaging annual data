@@ -13,3 +13,8 @@ combined_data = pd.concat(data_frames, ignore_indexs = True)
 # Step 3: Handle missing values - Fills missing values with the mean of each column.
 # Fill missing values by averaging annual data - TBD
 combine_data.fillna(combined_data.mean(), inplace = True)
+
+# Normalise the numerical values - Standardizes the numerical values to have a mean of 0 and standard deviation of 1.
+from sklearn.preprocessing import StandardScaler 
+sclaer = StandardScaler()
+numeric_columns = ['Weekly import quantities', 'Weekly export quantities, 'Trade balance']
