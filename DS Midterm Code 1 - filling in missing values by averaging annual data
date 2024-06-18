@@ -18,3 +18,14 @@ combine_data.fillna(combined_data.mean(), inplace = True)
 from sklearn.preprocessing import StandardScaler 
 sclaer = StandardScaler()
 numeric_columns = ['Weekly import quantities', 'Weekly export quantities, 'Trade balance']
+
+# Create relevant features - Adds a new feature, "Net Trade," which is the difference between imports and exports.
+combined_data[numeric_columns] = scaler.fit_transform(combined_data[numeric_columns])
+
+# Create relevant features for analysis
+combined_data['Net Trade'] = combined_data['Weekly import quantities'] - combined_data['Weekly export quantities']
+
+# Show the first few rows of the new combined dataset
+print(combined_data.head())
+
+
