@@ -1,0 +1,2 @@
+# Predicting-Food-Shortages-and-Price-Volatility-in-the-Maize-Supply-Chain-Using-Linear-Regression
+The primary objective of this project is to analyse the maize supply chain to predict potential food shortages and understand price volatility. By using linear regression, we aim to forecast future supply and demand patterns, identify critical factors influencing maize availability, and provide actionable insights for food security management.
