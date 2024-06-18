@@ -1,1 +1,20 @@
+# 
+import pandas as pd
+import numpy as np
 
+# Step 1: Collect maize trade data - Reads CSV files for each week's data.
+# Clarify time frame 
+files = [#example file names]
+data_frames = [pd.read_csv(file) for file in files]
+
+# Step 2: Combine the datasets based on a common time frame - Merges the data frames into a single dataset.
+combined_data = pd.concat(data_frames, ignore_indexs = True)
+
+# Step 3: Handle missing values - Fills missing values with the mean of each column.
+# Fill missing values by averaging annual data - TBD
+combine_data.fillna(combined_data.mean(), inplace = True)
+
+# Normalise the numerical values - Standardizes the numerical values to have a mean of 0 and standard deviation of 1.
+from sklearn.preprocessing import StandardScaler 
+sclaer = StandardScaler()
+numeric_columns = ['Weekly import quantities', 'Weekly export quantities, 'Trade balance']
